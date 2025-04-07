@@ -1,4 +1,8 @@
-const form = document.getElementById("contactForm");
+// Mobile menu toggle functionality
+
+
+
+const form = document.getElementById("contact-form");
     const submitBtn = document.getElementById("submit-button");
     const submitText = document.getElementById("submit-text");
     const toast = document.getElementById("toast");
@@ -59,7 +63,6 @@ const form = document.getElementById("contactForm");
       document.getElementById("contact-form").classList.remove("hidden");
       successMessage.classList.add("hidden");
     }
-// Mobile menu toggle functionality
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -95,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     });
-    
   
     // Contact form submission
     const contactForm = document.getElementById('contactForm');

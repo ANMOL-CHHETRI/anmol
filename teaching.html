@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Options - Learn with Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0adb 0%, #1c014d 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Added notification banner styles */
+        .notification-banner {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .notification-banner h3 {
+            color: #ffc107;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+
+        .notification-banner p {
+            color: #ff9800;
+            font-size: 1em;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            color: #a0a0b0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .option-card {
+            background: linear-gradient(145deg, rgba(30, 30, 50, 0.8), rgba(40, 40, 60, 0.9));
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 16px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .option-card:hover::before {
+            left: 100%;
+        }
+
+        .option-card:hover {
+            border-color: rgba(0, 212, 255, 0.6);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .option-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .option-description {
+            color: #b0b0c0;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 0.95em;
+        }
+
+        /* Added button container and styles for dual buttons */
+        .button-container {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .learn-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #00d4ff, #0099ff);
+            color: #0f0f1e;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95em;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .learn-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        .learn-btn:active {
+            transform: scale(0.98);
+        }
+
+        .learn-btn-secondary {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(0, 153, 255, 0.2));
+            color: #00d4ff;
+            border: 2px solid rgba(0, 212, 255, 0.6);
+        }
+
+        .learn-btn-secondary:hover {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(0, 153, 255, 0.3));
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .options-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .option-card {
+                padding: 25px;
+            }
+
+            .button-container {
+                flex-direction: column;
+            }
+
+            .learn-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Added notification banner -->
+        <div class="notification-banner">
+            <h3>🚀 Something Big is Coming Soon!</h3>
+            <p>Stay tuned for exciting new courses and exclusive updates</p>
+        </div>
+
+        <div class="header">
+            <h1>Our Teaching Options</h1>
+            <p>Choose from our comprehensive courses designed to help you master in-demand digital skills</p>
+        </div>
+
+        <div class="options-grid">
+            <!-- Web Designing -->
+            <div class="option-card">
+                <div class="icon">🌐</div>
+                <h2 class="option-title">Web Designing</h2>
+                <p class="option-description">Learn modern web design principles, UI/UX best practices, responsive layouts, and create stunning websites that engage users.</p>
+                <button class="learn-btn">Explore Course</button>
+            </div>
+
+            <!-- Resume and CV -->
+            <div class="option-card">
+                <div class="icon">📄</div>
+                <h2 class="option-title">Resume & CV</h2>
+                <p class="option-description">Craft compelling resumes and CVs that stand out to recruiters. Learn professional formatting and how to highlight your achievements.</p>
+                <!-- Replaced single button with two buttons in a container -->
+                <div class="button-container">
+                  <a href="Resumetemplate.docx" download="resume">  <button class="learn-btn learn-btn-secondary">Resume</button></a>
+                    <a href="curriculum-vitae-template.docx" download="cv"><button class="learn-btn learn-btn-secondary">CV</button></a>
+
+                </div>
+            </div>
+
+            <!-- Graphic Design -->
+            <div class="option-card">
+                <div class="icon">🎨</div>
+                <h2 class="option-title">Graphic Design</h2>
+                <p class="option-description">Master design tools, color theory, typography, and create visually stunning graphics for branding and marketing campaigns.</p>
+                <button class="learn-btn">Learn More</button>
+            </div>
+
+            <!-- Domain Registration -->
+            <div class="option-card">
+                <div class="icon">🌍</div>
+                <h2 class="option-title">Domain Registration</h2>
+                <p class="option-description">Understand domain names, how to register them, choose the right domain for your brand, and manage your online presence.</p>
+                <button class="learn-btn">Explore Course</button>
+            </div>
+
+            <!-- Cloud Hosting -->
+            <div class="option-card">
+                <div class="icon">☁️</div>
+                <h2 class="option-title">Cloud Hosting</h2>
+                <p class="option-description">Deploy applications securely on cloud platforms. Learn about servers, scaling, security, and cloud infrastructure management.</p>
+                <button class="learn-btn">Get Started</button>
+            </div>
+
+            <!-- Digital Marketing -->
+            <div class="option-card">
+                <div class="icon">📱</div>
+                <h2 class="option-title">Digital Marketing</h2>
+                <p class="option-description">Learn SEO, social media marketing, content strategy, and analytics to grow your business and reach your target audience online.</p>
+                <button class="learn-btn">Learn More</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

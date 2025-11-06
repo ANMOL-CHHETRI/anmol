@@ -198,6 +198,7 @@ img {
 }
 
 .hero-text p {
+  display: flex;
   font-size: 1.125rem;
   margin-bottom: 2rem;
   opacity: 0.9;
@@ -439,6 +440,7 @@ img {
   
 
 }
+
 
 
 

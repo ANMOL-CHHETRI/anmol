@@ -1,2 +1,2 @@
-# anmol
-portifilio
+🌐 Personal Website Repository
+This repository contains the source code for my personal website — a digital space where I showcase my projects, technical skills, leadership experiences, and personal journey as a student developer and campus ambassador. Built with modern web technologies like HTML, CSS, JavaScript, and React.js, the site reflects my passion for practical learning, innovation, and community impact.

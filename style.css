@@ -387,6 +387,7 @@ img {
       flex-direction: row;
       text-align: left;
       justify-content: space-between;
+    align-items: center;
   }
  
 
@@ -396,6 +397,9 @@ img {
 
   .hero-buttons {
       justify-content: flex-start;
+  }
+  .hero-text p{
+    color: #ffffff;
   }
 
   .contact-content {
@@ -439,6 +443,7 @@ img {
   
 
 }
+
 
 
 

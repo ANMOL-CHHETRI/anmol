@@ -174,6 +174,9 @@ img {
 .mobile-link:hover {
   background-color: var(--secondary-color);
 }
+.hero-text p{
+  display :none; 
+}
 
 /* Hero Section */
 .hero {
@@ -387,9 +390,7 @@ img {
       text-align: left;
       justify-content: space-between;
   }
-  .hero-text p{
-    display: none;
-  }
+ 
 
   .hero-text {
       max-width: 50%;
@@ -440,4 +441,5 @@ img {
   
 
 }
+
 

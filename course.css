@@ -21,14 +21,10 @@
     font-size: xx-large;
     color: rgb(238, 20, 20);
 }
-.img{
-    margin-top: 1rem;
-    background-image: url("anmol-bakground.png");
-    height: 75vh;
-    background-size: cover;       
-    background-repeat: no-repeat; 
-    background-position: center; 
-
+img{
+   width: 100%;
+   height: auto;
+   padding-bottom: 1rem;
 }
      .container {
             max-width: 1200px;
@@ -187,6 +183,10 @@ footer{
       position: relative;  
         
     
+    }
+    img{
+        width: 100%;
+        height: auto;
     }
     .header h1 {
                 font-size: 2em;

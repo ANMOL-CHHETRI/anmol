@@ -63,7 +63,7 @@ img{
         }
 
         .option-card {
-            background: linear-gradient(145deg, rgba(30, 30, 50, 0.8), rgba(40, 40, 60, 0.9));
+            background: linear-gradient(145deg, rgba(247, 246, 238, 0.8), rgba(246, 246, 244, 0.9));
             border: 1px solid rgba(0, 212, 255, 0.2);
             border-radius: 16px;
             padding: 35px;
@@ -110,11 +110,11 @@ img{
             font-size: 1.5em;
             font-weight: 600;
             margin-bottom: 12px;
-            color: #ffffff;
+            color: #0e0d0d;
         }
 
         .option-description {
-            color: #b0b0c0;
+            color: #58585e;
             line-height: 1.6;
             margin-bottom: 25px;
             font-size: 0.95em;

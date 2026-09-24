@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Courses & Learning Resources - Anmol Chhetri</title>
-    <meta name="description" content="Explore practical career courses, downloadable templates, and developer guides curated by Anmol Chhetri.">
+    <meta name="description" content="Explore practical career courses, downloadable templates, and developer guides curated by Anmol Chhetri, CMO at Yarshabyte.com.">
     <meta name="author" content="Anmol Chhetri">
 
     <!-- Open Graph Meta Tags -->
@@ -18,7 +18,7 @@
     <!-- Favicon -->
     <link rel="icon" href="logo.png" type="image/x-icon">
 
-    <!-- Google Fonts & Font Awesome Icons -->
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
 </head>
 <body>
 
-    <!-- Navigation Bar (Consistent with index.html) -->
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
             <div class="navbar-content">
@@ -54,78 +54,47 @@
 
     <main class="container">
 
-        <!-- Page Header -->
-        <header class="page-header">
+        <!-- Workshop Banner & Role -->
+        <section class="hero-banner-section" aria-label="Mentor and CMO Role">
+            <div class="banner-card">
+                <img src="anmolbackground.webp" alt="Anmol Chhetri workshops and leadership sessions" class="banner-img">
+                <div class="banner-caption">
+                    <div class="banner-role">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span>CMO at <a href="https://yarshabyte.com" target="_blank" rel="noopener noreferrer">Yarshabyte.com</a></span>
+                    </div>
+                    <span class="banner-tag">Learning Hub</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Header & Integrated Search -->
+        <header class="section-header">
             <h1 class="section-title">What You'll Learn</h1>
-            <p class="page-subtitle">
+            <p class="section-subtitle">
                 Comprehensive courses and practical resources designed to accelerate your professional growth and technical skills.
             </p>
 
-            <div class="highlights-bar">
-                <div class="highlight-pill">
-                    <i class="fa-solid fa-book-open"></i>
-                    <span><strong>9</strong> Practical Modules</span>
-                </div>
-                <div class="highlight-pill">
-                    <i class="fa-solid fa-file-arrow-down"></i>
-                    <span>Free Downloadable Templates</span>
-                </div>
-                <div class="highlight-pill">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span>100% Free & Open Access</span>
-                </div>
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input 
+                    type="text" 
+                    id="courseSearch" 
+                    placeholder="Search courses or templates (e.g. resume, git, canva, ai)..." 
+                    autocomplete="off"
+                >
+                <button id="clearSearch" class="clear-btn" title="Clear search" aria-label="Clear search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
+            <p id="searchStatus" class="search-status" style="display: none;"></p>
         </header>
 
-        <!-- Showcase Workshop Banner -->
-        <section class="banner-section" aria-label="Workshop and Mentorship Activities">
-            <div class="banner-card">
-                <img src="anmolbackground.webp" alt="Anmol Chhetri mentoring sessions and workshops" class="banner-img">
-                <div class="banner-caption">
-                    <span class="banner-caption-text">
-                        <i class="fa-solid fa-chalkboard-user"></i>
-                        Student Ambassador at National Innovation Centre (NIC) • Workshop Mentor
-                    </span>
-                    <span class="banner-badge">Verified Curriculum</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Search & Filter Controls -->
-        <section class="controls-container" aria-label="Search and category filters">
-            <div class="controls-inner">
-                <div class="search-field">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input 
-                        type="text" 
-                        id="courseSearch" 
-                        placeholder="Search courses, templates, keywords (e.g. resume, git, canva, ai)..." 
-                        autocomplete="off"
-                    >
-                    <button id="clearSearch" class="clear-search-btn" title="Clear search">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-
-                <div class="filter-pills" role="tablist">
-                    <button class="filter-btn active" data-filter="all">All Modules</button>
-                    <button class="filter-btn" data-filter="career">Career & Jobs</button>
-                    <button class="filter-btn" data-filter="tech">Web & Tech</button>
-                    <button class="filter-btn" data-filter="design">Design</button>
-                    <button class="filter-btn" data-filter="research">AI & Research</button>
-                </div>
-
-                <div class="filter-meta">
-                    <span id="resultsCount">Showing 9 of 9 modules</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Course Cards Grid -->
-        <section class="options-grid" id="optionsGrid">
+        <!-- Balanced 3-Column Course Cards Grid -->
+        <section class="options-grid" id="optionsGrid" aria-label="Available Courses">
 
             <!-- 1. Domain Registration & Cover Letter -->
-            <article class="option-card" data-category="career" data-title="Domain Registration & Cover letter" data-keywords="domain register nepali np cover letter personal branding email dns host">
+            <article class="option-card" data-title="Domain Registration & Cover letter" data-keywords="domain register nepali np cover letter personal branding email dns host">
                 <div class="card-top">
                     <div class="icon">
                         <i class="fa-solid fa-globe"></i>
@@ -149,7 +118,7 @@
             </article>
 
             <!-- 2. Resume & CV -->
-            <article class="option-card" data-category="career" data-title="Building Professional Resume & CV" data-keywords="resume cv curriculum vitae ats job application career template docx">
+            <article class="option-card" data-title="Building Professional Resume & CV" data-keywords="resume cv curriculum vitae ats job application career template docx">
                 <div class="card-top">
                     <div class="icon">
                         <i class="fa-solid fa-file-lines"></i>
@@ -173,7 +142,7 @@
             </article>
 
             <!-- 3. LinkedIn & Networking -->
-            <article class="option-card" data-category="career" data-title="Building Your Business Network with LinkedIn" data-keywords="linkedin networking ats jobscan business recruiter connections profile">
+            <article class="option-card" data-title="Building Your Business Network with LinkedIn" data-keywords="linkedin networking ats jobscan business recruiter connections profile">
                 <div class="card-top">
                     <div class="icon">
                         <i class="fa-brands fa-linkedin-in"></i>
@@ -197,7 +166,7 @@
             </article>
 
             <!-- 4. Git & GitHub -->
-            <article class="option-card" data-category="tech" data-title="Git & GitHub" data-keywords="git github version control repository commits pull request branches open source">
+            <article class="option-card" data-title="Git & GitHub" data-keywords="git github version control repository commits pull request branches open source">
                 <div class="card-top">
                     <div class="icon">
                         <i class="fa-brands fa-git-alt"></i>
@@ -221,7 +190,7 @@
             </article>
 
             <!-- 5. Web Designing Foundation -->
-            <article class="option-card" data-category="tech" data-title="Web designing Foundation" data-keywords="web design html css javascript frontend responsive ui layout ux performance">
+            <article class="option-card" data-title="Web designing Foundation" data-keywords="web design html css javascript frontend responsive ui layout ux performance">
                 <div class="card-top">
                     <div class="icon">
                         <i class="fa-solid fa-code"></i>
@@ -245,7 +214,7 @@
             </article>
 
             <!-- 6. Cloudflare & Hosting -->
-            <article class="option-card" data-category="tech" data-title="Cloudflare & Hosting" data-keywords="cloudflare hosting dns ssl edge cdn web deploy security static pages">
+            <article class="option-card" data-title="Cloudflare & Hosting" data-keywords="cloudflare hosting dns ssl edge cdn web deploy security static pages">
                 <div class="card-top">
                     <div class="icon">
                         <i class="fa-brands fa-cloudflare"></i>
@@ -269,7 +238,7 @@
             </article>
 
             <!-- 7. Canva Designing Mastery -->
-            <article class="option-card" data-category="design" data-title="Canva Designing Mastery" data-keywords="canva graphic design banners posters social media presentation visual brand kit drive">
+            <article class="option-card" data-title="Canva Designing Mastery" data-keywords="canva graphic design banners posters social media presentation visual brand kit drive">
                 <div class="card-top">
                     <div class="icon">
                         <i class="fa-solid fa-palette"></i>
@@ -293,7 +262,7 @@
             </article>
 
             <!-- 8. Proposal & Report Writing -->
-            <article class="option-card" data-category="research" data-title="Proposal & Report Writing" data-keywords="proposal report bca tu research tribhuvan university documentation academic format docx pdf">
+            <article class="option-card" data-title="Proposal & Report Writing" data-keywords="proposal report bca tu research tribhuvan university documentation academic format docx pdf">
                 <div class="card-top">
                     <div class="icon">
                         <i class="fa-solid fa-file-contract"></i>
@@ -317,7 +286,7 @@
             </article>
 
             <!-- 9. Personal Growth with AI -->
-            <article class="option-card" data-category="research" data-title="Personal Growth with AI" data-keywords="ai personal growth smart goals artificial intelligence productivity learning mindset pdf">
+            <article class="option-card" data-title="Personal Growth with AI" data-keywords="ai personal growth smart goals artificial intelligence productivity learning mindset pdf">
                 <div class="card-top">
                     <div class="icon">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -346,13 +315,16 @@
         <div class="empty-box" id="emptyBox">
             <i class="fa-solid fa-magnifying-glass"></i>
             <h3>No courses found</h3>
-            <p>We couldn't find any courses matching your search. Try another keyword or reset the filter.</p>
-            <button class="btn btn-primary" id="resetBtn" style="display: inline-flex;">Reset Filters</button>
+            <p>We couldn't find any courses matching your search. Try another keyword or clear your query.</p>
+            <button class="btn-reset" id="resetBtn">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>Reset Search</span>
+            </button>
         </div>
 
     </main>
 
-    <!-- Footer (Consistent with index.html) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -372,70 +344,54 @@
         document.addEventListener('DOMContentLoaded', () => {
             const searchInput = document.getElementById('courseSearch');
             const clearSearchBtn = document.getElementById('clearSearch');
-            const filterBtns = document.querySelectorAll('.filter-btn');
+            const searchStatus = document.getElementById('searchStatus');
             const cards = document.querySelectorAll('.option-card');
             const emptyBox = document.getElementById('emptyBox');
-            const resultsCount = document.getElementById('resultsCount');
             const resetBtn = document.getElementById('resetBtn');
 
-            let activeCategory = 'all';
-            let searchQuery = '';
-
-            function updateDisplay() {
-                let count = 0;
-                const query = searchQuery.trim().toLowerCase();
+            function filterCards() {
+                const query = searchInput.value.trim().toLowerCase();
+                let visibleCount = 0;
 
                 cards.forEach(card => {
-                    const cat = card.dataset.category;
                     const title = (card.dataset.title || '').toLowerCase();
                     const desc = card.querySelector('.option-description').textContent.toLowerCase();
-                    const kw = (card.dataset.keywords || '').toLowerCase();
+                    const keywords = (card.dataset.keywords || '').toLowerCase();
 
-                    const matchesCategory = (activeCategory === 'all' || cat === activeCategory);
-                    const matchesSearch = !query || title.includes(query) || desc.includes(query) || kw.includes(query);
+                    const matches = !query || title.includes(query) || desc.includes(query) || keywords.includes(query);
 
-                    if (matchesCategory && matchesSearch) {
+                    if (matches) {
                         card.style.display = 'flex';
-                        count++;
+                        visibleCount++;
                     } else {
                         card.style.display = 'none';
                     }
                 });
 
-                resultsCount.textContent = `Showing ${count} of ${cards.length} modules`;
-                emptyBox.classList.toggle('active', count === 0);
-                clearSearchBtn.style.display = query.length > 0 ? 'block' : 'none';
+                if (query.length > 0) {
+                    clearSearchBtn.style.display = 'block';
+                    searchStatus.style.display = 'block';
+                    searchStatus.textContent = `Showing ${visibleCount} of ${cards.length} courses`;
+                } else {
+                    clearSearchBtn.style.display = 'none';
+                    searchStatus.style.display = 'none';
+                }
+
+                emptyBox.classList.toggle('active', visibleCount === 0);
             }
 
-            searchInput.addEventListener('input', (e) => {
-                searchQuery = e.target.value;
-                updateDisplay();
-            });
+            searchInput.addEventListener('input', filterCards);
 
             clearSearchBtn.addEventListener('click', () => {
                 searchInput.value = '';
-                searchQuery = '';
-                updateDisplay();
+                filterCards();
                 searchInput.focus();
-            });
-
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    activeCategory = btn.dataset.filter;
-                    updateDisplay();
-                });
             });
 
             resetBtn.addEventListener('click', () => {
                 searchInput.value = '';
-                searchQuery = '';
-                activeCategory = 'all';
-                filterBtns.forEach(b => {
-                    b.classList.toggle('active', b.dataset.filter === 'all');
-                });
-                updateDisplay();
+                filterCards();
+                searchInput.focus();
             });
         });
     </script>

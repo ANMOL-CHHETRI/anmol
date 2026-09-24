@@ -3,158 +3,440 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Anmol Chhetri" />
-    <meta property="og:description" content="Welcome to Anmol Chhetri – Your gateway to special design career courses, skill‑driven learning, and future‑ready growth.." />
-    <meta property="og:image" content="anmolmeta.jpg" />
-    <meta property="og:url" content="https://www.anmolchhetri.com.np" />
-    <meta property="og:type" content="website" />
-    <title>Special design career courses  </title>
-    <link rel="icon" href="logo.png" type="image/x-icon" >
+    
+    <title>Courses & Learning Resources - Anmol Chhetri</title>
+    <meta name="description" content="Explore practical career courses, downloadable templates, and developer guides curated by Anmol Chhetri.">
+    <meta name="author" content="Anmol Chhetri">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Courses & Learning Resources - Anmol Chhetri">
+    <meta property="og:description" content="Explore practical design, career development, and web courses curated by Anmol Chhetri.">
+    <meta property="og:image" content="anmolmeta.jpg">
+    <meta property="og:url" content="https://www.anmolchhetri.com.np/course.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/x-icon">
+
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="course.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <nav class="nav">
-        <a href="https://anmolchhetri.vercel.app"><h2>Anmol Chhetri</h2></a>
-        <a href="index.html">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i>
-        </a>
+
+    <!-- Navigation Bar (Consistent with index.html) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="index.html" class="logo-group">
+                    <img src="profile.jpg" alt="Anmol Chhetri" class="logo-avatar">
+                    <span class="logo-text">Anmol Chhetri</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#education" class="nav-link">Education</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="index.html" class="nav-back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Portfolio Home</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </nav>
-    <div class="img"> <img src="anmolbackground.webp" alt="background">
-    </div> 
 
-    <!-- box -->
-      <div class="container">
-        <div class="header">
-            <h1>What You'll Learn</h1>
-            <p>Comprehensive courses designed to accelerate your professional growth and technical skills.</p>
-        </div>
+    <main class="container">
 
-        <div class="options-grid">
-            <!-- Domain Registration -->
-            <div class="option-card">
-                <div class="icon"><i class="fa-brands fa-creative-commons-share" style="color: rgb(224, 24, 24);"></i></div>
+        <!-- Page Header -->
+        <header class="page-header">
+            <h1 class="section-title">What You'll Learn</h1>
+            <p class="page-subtitle">
+                Comprehensive courses and practical resources designed to accelerate your professional growth and technical skills.
+            </p>
+
+            <div class="highlights-bar">
+                <div class="highlight-pill">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span><strong>9</strong> Practical Modules</span>
+                </div>
+                <div class="highlight-pill">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span>Free Downloadable Templates</span>
+                </div>
+                <div class="highlight-pill">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>100% Free & Open Access</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Showcase Workshop Banner -->
+        <section class="banner-section" aria-label="Workshop and Mentorship Activities">
+            <div class="banner-card">
+                <img src="anmolbackground.webp" alt="Anmol Chhetri mentoring sessions and workshops" class="banner-img">
+                <div class="banner-caption">
+                    <span class="banner-caption-text">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        Student Ambassador at National Innovation Centre (NIC) • Workshop Mentor
+                    </span>
+                    <span class="banner-badge">Verified Curriculum</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Filter Controls -->
+        <section class="controls-container" aria-label="Search and category filters">
+            <div class="controls-inner">
+                <div class="search-field">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="courseSearch" 
+                        placeholder="Search courses, templates, keywords (e.g. resume, git, canva, ai)..." 
+                        autocomplete="off"
+                    >
+                    <button id="clearSearch" class="clear-search-btn" title="Clear search">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="filter-pills" role="tablist">
+                    <button class="filter-btn active" data-filter="all">All Modules</button>
+                    <button class="filter-btn" data-filter="career">Career & Jobs</button>
+                    <button class="filter-btn" data-filter="tech">Web & Tech</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                    <button class="filter-btn" data-filter="research">AI & Research</button>
+                </div>
+
+                <div class="filter-meta">
+                    <span id="resultsCount">Showing 9 of 9 modules</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Cards Grid -->
+        <section class="options-grid" id="optionsGrid">
+
+            <!-- 1. Domain Registration & Cover Letter -->
+            <article class="option-card" data-category="career" data-title="Domain Registration & Cover letter" data-keywords="domain register nepali np cover letter personal branding email dns host">
+                <div class="card-top">
+                    <div class="icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <span class="category-tag">Career & Branding</span>
+                </div>
                 <h2 class="option-title">Domain Registration & Cover letter</h2>
-                <p class="option-description">Understand how to choose, register, and manage your own domain name for personal branding or business.</p>
+                <p class="option-description">
+                    Understand how to choose, register, and manage your own domain name (including Nepal's free .np domain) for personal branding, paired with professional cover letter templates.
+                </p>
                 <div class="button-container">
-                  <a href="https://register.com.np/" download="resume">  <button class="learn-btn learn-btn-secondary">Domain</button></a>
-                    <a href="Domain-registration.docx" download="cv"><button class="learn-btn learn-btn-secondary">Cover letter</button></a>
+                    <a href="https://register.com.np/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span>Register .NP</span>
+                    </a>
+                    <a href="Domain-registration.docx" download="Domain-Registration-Cover-Letter.docx" class="btn btn-secondary">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Cover Letter</span>
+                    </a>
                 </div>
-            </div>
+            </article>
 
-            <!-- Resume and CV -->
-            <div class="option-card">
-                <div class="icon"><i class="fa-solid fa-file" style="color: rgb(224, 24, 24);"></i></div>
+            <!-- 2. Resume & CV -->
+            <article class="option-card" data-category="career" data-title="Building Professional Resume & CV" data-keywords="resume cv curriculum vitae ats job application career template docx">
+                <div class="card-top">
+                    <div class="icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <span class="category-tag">Career & Resume</span>
+                </div>
                 <h2 class="option-title">Building Professional Resume & CV</h2>
-                <p class="option-description">Craft a standout resume that highlights your skills, experience, and achievements to land your dream job..</p>
-                <!-- Replaced single button with two buttons in a container -->
+                <p class="option-description">
+                    Craft a standout, ATS-compliant resume and comprehensive CV that highlights your technical skills, experience, and academic achievements to land your dream job.
+                </p>
                 <div class="button-container">
-                  <a href="Resumetemplate.docx" download="resume">  <button class="learn-btn learn-btn-secondary">Resume</button></a>
-                    <a href="curriculum-vitae-template.docx" download="cv"><button class="learn-btn learn-btn-secondary">CV</button></a>
-
+                    <a href="Resumetemplate.docx" download="Anmol-Resume-Template.docx" class="btn btn-primary">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Resume</span>
+                    </a>
+                    <a href="curriculum-vitae-template.docx" download="Anmol-CV-Template.docx" class="btn btn-secondary">
+                        <i class="fa-solid fa-download"></i>
+                        <span>CV Template</span>
+                    </a>
                 </div>
-            </div>
+            </article>
 
-            <!-- Business network with linkein -->
-            <div class="option-card">
-                <div class="icon"><i class="fa-brands fa-linkedin" style="color: rgb(239, 42, 42);"></i></div>
+            <!-- 3. LinkedIn & Networking -->
+            <article class="option-card" data-category="career" data-title="Building Your Business Network with LinkedIn" data-keywords="linkedin networking ats jobscan business recruiter connections profile">
+                <div class="card-top">
+                    <div class="icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <span class="category-tag">Networking</span>
+                </div>
                 <h2 class="option-title">Building Your Business Network with LinkedIn</h2>
-                <p class="option-description">Leverage LinkedIn to grow meaningful professional connections, enhance your visibility, and unlock opportunities..</p>
-                 <div class="button-container">
-                  <a href="https://www.jobscan.co/">  <button class="learn-btn learn-btn-secondary">ATS</button></a>
-                    <a href="https://www.linkedin.com/in/anmolchhetri" ><button class="learn-btn learn-btn-secondary"><i class="fa-brands fa-linkedin-in" style="color: rgb(116, 192, 252);"></i></button></a>
-
+                <p class="option-description">
+                    Leverage LinkedIn to grow meaningful professional connections, run ATS resume scans to match job postings, and expand career opportunities.
+                </p>
+                <div class="button-container">
+                    <a href="https://www.jobscan.co/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <span>ATS Scanner</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anmolchhetri" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <span>Connect</span>
+                    </a>
                 </div>
-            </div>
+            </article>
 
-            <!-- Git and Github -->
-            <div class="option-card">
-                <div class="icon"><i class="fa-brands fa-git-alt" style="color: rgb(224, 24, 24);"></i></div>
+            <!-- 4. Git & GitHub -->
+            <article class="option-card" data-category="tech" data-title="Git & GitHub" data-keywords="git github version control repository commits pull request branches open source">
+                <div class="card-top">
+                    <div class="icon">
+                        <i class="fa-brands fa-git-alt"></i>
+                    </div>
+                    <span class="category-tag">Web & Tech</span>
+                </div>
                 <h2 class="option-title">Git & GitHub</h2>
-                <p class="option-description">Learn version control fundamentals, collaboration workflows, and open-source contribution with Git and GitHub.</p>
-                 <div class="button-container">
-                  <a href="https://git-scm.com/">  <button class="learn-btn learn-btn-secondary">Git</button></a>
-                    <a href="https://github.com" ><button class="learn-btn learn-btn-secondary">Github</button></a>
-
+                <p class="option-description">
+                    Learn version control fundamentals, collaboration workflows, branch management, pull requests, and open-source contribution with Git and GitHub.
+                </p>
+                <div class="button-container">
+                    <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>Git SCM</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
                 </div>
-            </div>
+            </article>
 
-            <!-- Web designing Foundation -->
-            <div class="option-card">
-                <div class="icon"><i class="fa-solid fa-bezier-curve" style="color: rgb(224, 24, 24);"></i></div>
+            <!-- 5. Web Designing Foundation -->
+            <article class="option-card" data-category="tech" data-title="Web designing Foundation" data-keywords="web design html css javascript frontend responsive ui layout ux performance">
+                <div class="card-top">
+                    <div class="icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <span class="category-tag">Web & Tech</span>
+                </div>
                 <h2 class="option-title">Web designing Foundation</h2>
-                <p class="option-description">Build, design, and launch your websites with a strong foundation—learn essential web design skills that ensure performance and reliability.</p>
-                 <div class="button-container">
-                  <a href="https://anmol.info.np/">  <button class="learn-btn learn-btn-secondary">View</button></a>
-                    <!-- <a href="tel:+9779748809637" ><button class="learn-btn learn-btn-secondary"><i class="fa-solid fa-phone" style="color: rgb(224, 24, 24);"></i></button></a> -->
-
+                <p class="option-description">
+                    Build, design, and launch your websites with a strong foundation—learn essential web design skills that ensure responsiveness, clean code, and performance.
+                </p>
+                <div class="button-container">
+                    <a href="https://anmol.info.np/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span>Live Site</span>
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Portfolio</span>
+                    </a>
                 </div>
-                
-            </div>
+            </article>
 
-            <!-- Cloud fare and hosting -->
-            <div class="option-card">
-                <div class="icon"><i class="fa-brands fa-cloudflare" style="color: rgb(224, 24, 24);"></i></div>
+            <!-- 6. Cloudflare & Hosting -->
+            <article class="option-card" data-category="tech" data-title="Cloudflare & Hosting" data-keywords="cloudflare hosting dns ssl edge cdn web deploy security static pages">
+                <div class="card-top">
+                    <div class="icon">
+                        <i class="fa-brands fa-cloudflare"></i>
+                    </div>
+                    <span class="category-tag">Web & Tech</span>
+                </div>
                 <h2 class="option-title">Cloudflare & Hosting</h2>
-                <p class="option-description">Deploy and host your projects with Cloudflare, optimize performance, and secure your web applications.</p>
-                 <div class="button-container">
-                  <a href="https://www.cloudflare.com/">  <button class="learn-btn learn-btn-secondary">Cloudflare</button></a>
-                  <!-- <a href="BANNER OF AI.png">  <button class="learn-btn learn-btn-secondary">Banner</button></a> -->
-
-
+                <p class="option-description">
+                    Deploy and host your projects with Cloudflare Pages, manage DNS records, install free SSL certificates, and secure your web applications.
+                </p>
+                <div class="button-container">
+                    <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-solid fa-cloud"></i>
+                        <span>Cloudflare</span>
+                    </a>
+                    <a href="https://dash.cloudflare.com/sign-up" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span>Sign Up</span>
+                    </a>
                 </div>
-            </div>
+            </article>
 
-              <!-- canva designing Foundation -->
-            <div class="option-card">
-                <div class="icon"><i class="fa-solid fa-hands" style="color: rgb(227, 11, 82);"></i></div>
+            <!-- 7. Canva Designing Mastery -->
+            <article class="option-card" data-category="design" data-title="Canva Designing Mastery" data-keywords="canva graphic design banners posters social media presentation visual brand kit drive">
+                <div class="card-top">
+                    <div class="icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <span class="category-tag">Design</span>
+                </div>
                 <h2 class="option-title">Canva Designing Mastery</h2>
-                <p class="option-description">Create stunning graphics, social media posts, presentations, and branding materials using Canva's powerful design tools and templates for professional results.</p>
-                 <div class="button-container">
-                  <a href="https://canva.com">  <button class="learn-btn learn-btn-secondary">Canva</button></a>
-                  <a href="https://drive.google.com/drive/folders/1c4KUZifEqbVEAGyEwZQTpq1gxatWuXth?usp=sharing">  <button class="learn-btn learn-btn-secondary">Design</button></a>
-                   
-
+                <p class="option-description">
+                    Create clean graphics, social media posts, presentations, and branding materials using Canva's versatile design tools and shared resource templates.
+                </p>
+                <div class="button-container">
+                    <a href="https://canva.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <span>Canva</span>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1c4KUZifEqbVEAGyEwZQTpq1gxatWuXth?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fa-brands fa-google-drive"></i>
+                        <span>Asset Drive</span>
+                    </a>
                 </div>
-                
-            </div>
+            </article>
 
-              <!--Proposal & Report Writing -->
-            <div class="option-card">
-                <div class="icon"><i class="fa-solid fa-file" style="color: rgb(227, 11, 82);"></i></div>
+            <!-- 8. Proposal & Report Writing -->
+            <article class="option-card" data-category="research" data-title="Proposal & Report Writing" data-keywords="proposal report bca tu research tribhuvan university documentation academic format docx pdf">
+                <div class="card-top">
+                    <div class="icon">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <span class="category-tag">AI & Research</span>
+                </div>
                 <h2 class="option-title">Proposal & Report Writing</h2>
-                <p class="option-description">Learn to write clear, professional proposals and reports that effectively communicate ideas, present findings, and support informed decision-making..</p>
-                 <div class="button-container">
-                  <a href="full report file of bca 4th sem.docx">  <button class="learn-btn learn-btn-secondary">Report</button></a>
-                    <a href="https://portal.tu.edu.np/notice/1404/Research%20Proposal%20(Guideline).pdf" ><button class="learn-btn learn-btn-secondary">Rules</button></a>
-
+                <p class="option-description">
+                    Learn to write clear, professional academic proposals and reports following Tribhuvan University guidelines, including complete BCA 4th sem project reports.
+                </p>
+                <div class="button-container">
+                    <a href="full report file of bca 4th sem.docx" download="BCA-4th-Sem-Full-Report.docx" class="btn btn-primary">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Full Report</span>
+                    </a>
+                    <a href="https://portal.tu.edu.np/notice/1404/Research%20Proposal%20(Guideline).pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span>TU Rules</span>
+                    </a>
                 </div>
-                
-            </div>
+            </article>
 
-              <!--Professional Skill Development -->
-            <div class="option-card">
-                <div class="icon"><i class="fa-solid fa-wand-magic-sparkles" style="color: rgb(227, 11, 82);"></i></div>
+            <!-- 9. Personal Growth with AI -->
+            <article class="option-card" data-category="research" data-title="Personal Growth with AI" data-keywords="ai personal growth smart goals artificial intelligence productivity learning mindset pdf">
+                <div class="card-top">
+                    <div class="icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <span class="category-tag">AI & Research</span>
+                </div>
                 <h2 class="option-title">Personal Growth with AI</h2>
-                <p class="option-description">Build essential professional and AI skills using the SMART Goals framework to set clear objectives, track progress, and achieve personal and career growth.</p>
-                 <div class="button-container">
-                  <a href="smartgoal1.pdf">  <button class="learn-btn learn-btn-secondary">Skill</button></a>
-                    <a href="ai with anmol.info.np.pdf" ><button class="learn-btn learn-btn-secondary">AI</button></a>
-
+                <p class="option-description">
+                    Build essential professional and AI skills using the SMART Goals framework to set clear objectives, track progress, and achieve personal and career growth.
+                </p>
+                <div class="button-container">
+                    <a href="smartgoal1.pdf" target="_blank" class="btn btn-primary">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span>SMART Goals</span>
+                    </a>
+                    <a href="ai with anmol.info.np.pdf" target="_blank" class="btn btn-secondary">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span>AI Guide</span>
+                    </a>
                 </div>
-                
+            </article>
+
+        </section>
+
+        <!-- Empty State -->
+        <div class="empty-box" id="emptyBox">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>No courses found</h3>
+            <p>We couldn't find any courses matching your search. Try another keyword or reset the filter.</p>
+            <button class="btn btn-primary" id="resetBtn" style="display: inline-flex;">Reset Filters</button>
+        </div>
+
+    </main>
+
+    <!-- Footer (Consistent with index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2026 Anmol Chhetri. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/anmolchhetri" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/AnmolXettri.AC" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="index.html" title="Portfolio Home"><i class="fa-solid fa-house"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-
-  
-
-
-    <footer>
-        <center>© 2026 Professional Development Program. All rights reserved.</center>
     </footer>
 
+    <!-- Interactive Client Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('courseSearch');
+            const clearSearchBtn = document.getElementById('clearSearch');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.option-card');
+            const emptyBox = document.getElementById('emptyBox');
+            const resultsCount = document.getElementById('resultsCount');
+            const resetBtn = document.getElementById('resetBtn');
 
+            let activeCategory = 'all';
+            let searchQuery = '';
 
+            function updateDisplay() {
+                let count = 0;
+                const query = searchQuery.trim().toLowerCase();
+
+                cards.forEach(card => {
+                    const cat = card.dataset.category;
+                    const title = (card.dataset.title || '').toLowerCase();
+                    const desc = card.querySelector('.option-description').textContent.toLowerCase();
+                    const kw = (card.dataset.keywords || '').toLowerCase();
+
+                    const matchesCategory = (activeCategory === 'all' || cat === activeCategory);
+                    const matchesSearch = !query || title.includes(query) || desc.includes(query) || kw.includes(query);
+
+                    if (matchesCategory && matchesSearch) {
+                        card.style.display = 'flex';
+                        count++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                resultsCount.textContent = `Showing ${count} of ${cards.length} modules`;
+                emptyBox.classList.toggle('active', count === 0);
+                clearSearchBtn.style.display = query.length > 0 ? 'block' : 'none';
+            }
+
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                updateDisplay();
+            });
+
+            clearSearchBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                searchQuery = '';
+                updateDisplay();
+                searchInput.focus();
+            });
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeCategory = btn.dataset.filter;
+                    updateDisplay();
+                });
+            });
+
+            resetBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                searchQuery = '';
+                activeCategory = 'all';
+                filterBtns.forEach(b => {
+                    b.classList.toggle('active', b.dataset.filter === 'all');
+                });
+                updateDisplay();
+            });
+        });
+    </script>
 </body>
 </html>

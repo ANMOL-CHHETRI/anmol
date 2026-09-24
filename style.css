@@ -688,6 +688,15 @@ img {
 @media (min-width: 768px) {
   .nav-links {
       display: flex;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      align-items: center;
+  }
+
+  .nav-actions {
+      display: flex;
+      align-items: center;
   }
 
   .menu-toggle {

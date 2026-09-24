@@ -79,10 +79,13 @@ img {
 }
 
 .navbar-content {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 4rem;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -93,6 +96,7 @@ img {
   font-weight: 700;
   color: var(--primary-color);
   text-decoration: none;
+  z-index: 2;
 }
 
 .logo-avatar {
@@ -113,8 +117,14 @@ img {
   align-items: center;
 }
 
+.nav-actions {
+  display: none;
+  align-items: center;
+  z-index: 2;
+}
+
 .nav-link {
-  margin: 0 0.75rem;
+  margin: 0 0.85rem;
   padding: 0.5rem 0;
   position: relative;
   font-weight: 500;
@@ -140,7 +150,6 @@ img {
   align-items: center;
   gap: 0.45rem;
   padding: 0.45rem 1.1rem;
-  margin-left: 0.75rem;
   background-color: var(--primary-color);
   color: var(--white) !important;
   border-radius: 9999px;

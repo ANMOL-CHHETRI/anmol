@@ -17,7 +17,6 @@
     <meta name="author" content="Anmol Chhetri" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-    <link rel="stylesheet" href="script.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     
     
@@ -28,14 +27,20 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-content">
-          <a href="https://www.facebook.com/AnmolXettri.AC" class="logo">Anmol Chhetri</a>
+          <a href="index.html" class="logo">
+            <img src="logo.png" alt="Anmol Chhetri Logo" class="logo-avatar" />
+            <span>Anmol Chhetri</span>
+          </a>
           <div class="nav-links">
             <a href="#about" class="nav-link">About</a>
             <a href="#education" class="nav-link">Education</a>
             <a href="#contact" class="nav-link">Contact</a>
-            <a href="anmol.resume.pdf" download="MY resume" class="nav-link">Download Resume</a>
+            <a href="anmol.resume.pdf" download="Anmol_Chhetri_Resume" class="nav-resume-btn">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Resume</span>
+            </a>
           </div>
-          <button class="menu-toggle" id="menuToggle">
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
@@ -50,7 +55,7 @@
       <a href="#about" class="mobile-link">About</a>
       <a href="#education" class="mobile-link">Education</a>
       <a href="#contact" class="mobile-link">Contact</a>
-      <a href="anmol.resume.pdf" download="My resume" class="mobile-link">Resume</a>
+      <a href="anmol.resume.pdf" download="Anmol_Chhetri_Resume" class="mobile-link">Resume</a>
     </div>
 
     <!-- Hero Section -->
@@ -58,16 +63,27 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-           
-            <p>Hi, I'm <b>Anmol Chhetri</b>, currently serving as the Student Ambassador for the National Innovation Center at Butwal Kalika Campus. I'm passionate about innovation, leadership, and empowering students 
-              through technology and creative initiatives. As a College Ambassador, I actively engage in organizing impactful programs, fostering collaboration, and promoting a culture of innovation among my peers.</p>
+            <div class="hero-kicker">
+              <span class="kicker-dot"></span>
+              <span>President &bull; Nextgen Innovators Club BKC</span>
+            </div>
+            <h1>Hi, I'm <b>Anmol Chhetri</b></h1>
+            <p>
+              Currently serving as the President at <b>Nextgen Innovators Club BKC</b> and Student Ambassador for the <b>National Innovation Center</b> at Butwal Kalika Campus. I'm passionate about innovation, leadership, and empowering students through technology and creative initiatives. As a student leader, I actively engage in organizing impactful programs, fostering collaboration, and promoting a culture of innovation among my peers.
+            </p>
             <div class="hero-buttons">
-              <a href="course.html" class="primary-button">Provide Course</a>
-              <a href="https://anmol.yarshabyte.com" class="secondary-button">My Work</a>
+              <a href="course.html" class="primary-button">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Provide Course</span>
+              </a>
+              <a href="https://anmol.yarshabyte.com" target="_blank" rel="noopener noreferrer" class="secondary-button">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>My Work</span>
+              </a>
             </div>
           </div>
           <div class="hero-image">
-            <img src="profile.jpg" alt="Anmol Chhetri">
+            <img src="profile.jpg" alt="Anmol Chhetri - President at Nextgen Innovators Club BKC">
           </div>
         </div>
       </div>
@@ -91,6 +107,38 @@
               I enjoy learning new technologies and applying my knowledge to create useful applications.
             </p>
           </div>
+
+          <!-- Highlight Cards -->
+          <div class="about-grid">
+            <div class="about-card">
+              <div class="about-card-icon"><i class="fa-solid fa-user-graduate"></i></div>
+              <div class="about-card-info">
+                <h4>Academics</h4>
+                <p>BCA @ Butwal Kalika Campus</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="about-card-icon"><i class="fa-solid fa-award"></i></div>
+              <div class="about-card-info">
+                <h4>Leadership</h4>
+                <p>President @ Nextgen Innovators Club BKC</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="about-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="about-card-info">
+                <h4>Location</h4>
+                <p>Butwal, Lumbini, Nepal</p>
+              </div>
+            </div>
+            <div class="about-card">
+              <div class="about-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="about-card-info">
+                <h4>Interests</h4>
+                <p>Software &amp; Web Dev</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -103,7 +151,7 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h3>Bachelor of Computer Applications (BCA)</h3>
+              <h3><i class="fa-solid fa-graduation-cap"></i> Bachelor of Computer Applications (BCA)</h3>
               <p class="timeline-place">Butwal Kalika Campus</p>
               <p class="timeline-date">Present</p>
               <p>Currently pursuing my bachelor's degree in Computer Applications.</p>
@@ -112,7 +160,7 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h3>+2 Science</h3>
+              <h3><i class="fa-solid fa-flask"></i> +2 Science</h3>
               <p class="timeline-place">Kalika Manavgyan Secondary School</p>
               <p class="timeline-date">Completed</p>
               <p>Completed my higher secondary education with a focus on Science.</p>
@@ -121,7 +169,7 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <h3>School Education (SEE/SLC)</h3>
+              <h3><i class="fa-solid fa-school"></i> School Education (SEE/SLC)</h3>
               <p class="timeline-place">Prabhat English Boarding Secondary School</p>
               <p class="timeline-date">10th Grade Passed</p>
               <p>Completed my school education at Prabhat English boarding School.</p>
@@ -137,23 +185,33 @@
         <h2 class="section-title">Contact Me</h2>
         <div class="contact-content">
           <div class="contact-info">
-           
-              <a href="mailto:contact@anmolchhetri.com.np">
-              <i class="fa-solid fa-envelopes-bulk" style="color: rgb(227, 11, 82);"></i></a>
+            <a href="mailto:contact@anmolchhetri.com.np" class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="contact-item-title">Email</span>
+                <span class="contact-item-text">contact@anmolchhetri.com.np</span>
+              </div>
+            </a>
 
-              <a href="tel:+9779748809637">
-               <i class="fa-solid fa-square-phone" style="color: rgb(99, 230, 190);"></i>
+            <a href="tel:+9779748809637" class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span class="contact-item-title">Phone</span>
+                <span class="contact-item-text">+977 9748809637</span>
+              </div>
+            </a>
+
+            <div class="social-links-bar">
+              <a href="https://www.facebook.com/AnmolXettri.AC" target="_blank" rel="noopener noreferrer" class="social-icon-btn facebook" title="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
               </a>
-
-              <a href="https://www.facebook.com/AnmolXettri.AC"  >
-               <i class="fa-brands fa-facebook" style="color: rgb(116, 192, 252);"></i>
+              <a href="https://www.linkedin.com/in/canmol350" target="_blank" rel="noopener noreferrer" class="social-icon-btn linkedin" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
               </a>
-
-              <a href="https://www.linkedin.com/in/canmol350" >
-               <i class="fa-brands fa-linkedin-in" style="color: rgb(255, 212, 59);"></i> 
+              <a href="https://github.com/ANMOL-CHHETRI" target="_blank" rel="noopener noreferrer" class="social-icon-btn github" title="GitHub">
+                <i class="fa-brands fa-github"></i>
               </a>
-
-              <a href="https://github.com/ANMOL-CHHETRI"><i class="fa-brands fa-github" style="color: rgb(17, 17, 16);"></i></a>
+            </div>
           </div>
           <div class="contact-form">
             <div class="w-full">
@@ -165,17 +223,19 @@
     
               <form id="contact-form" class="space-y-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <input type="text" id="name" name="name" placeholder="Your Name" required class="p-3 border rounded w-full" />
-                  <input type="email" id="email" name="email" placeholder="Your Email" required class="p-3 border rounded w-full" />
+                  <input type="text" id="name" name="name" placeholder="Your Name" required class="p-3 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                  <input type="email" id="email" name="email" placeholder="Your Email" required class="p-3 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 </div>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required class="p-3 border rounded w-full" />
-                <textarea id="message" name="message" placeholder="Your Message" required class="p-3 border rounded w-full h-32"></textarea>
-                <button type="submit" id="submit-button" class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 flex justify-center items-center gap-2">
+                <input type="text" id="subject" name="subject" placeholder="Subject" required class="p-3 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <textarea id="message" name="message" placeholder="Your Message" required class="p-3 border rounded w-full h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                <button type="submit" id="submit-button" class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 flex justify-center items-center gap-2 transition duration-200 font-semibold shadow-md hover:shadow-lg">
+                  <i class="fa-solid fa-paper-plane"></i>
                   <span id="submit-text">Send Message</span>
                 </button>
               </form>
               <!-- Toast -->
-          <div id="toast" class="fixed bottom-4 right-4 bg-white shadow-md rounded px-4 py-3 border hidden"></div>
+              <div id="toast" class="fixed bottom-4 right-4 bg-white shadow-md rounded px-4 py-3 border hidden"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -183,9 +243,9 @@
 
     <!-- Footer -->
     <footer class="footer">
-      
-          <p>&copy; 2023 Anmol Chhetri. All rights reserved.</p>
-        
+      <div class="container">
+        <p>&copy; 2025 Anmol Chhetri. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
